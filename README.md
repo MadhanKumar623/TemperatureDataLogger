@@ -1,4 +1,4 @@
-# tempDataLogger
+# TemperatureDataLogger
 Hi all,
 My name is Madhan kumar, I have done this temperature data logger as the part of the ECEN academy under the guidance of Balaji seshadree sir.
 
