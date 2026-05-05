@@ -5,6 +5,7 @@ void writeToSDcard(char *date, char *time, char *temperature)
    strcat(date,"   ");       //appending some delimiter
    strcat(time,"   ");
    myFile = SD.open("test.txt", FILE_WRITE);  // Create/Open file 
+   delay1(10);
    if (myFile) 
    {
        Serial0_transmitString("Writing data to file...\n");

@@ -26,13 +26,13 @@ void loop()                 //runs continuosly
    printTimeToLcd();
    printTimeToSerial();       
    tempResult = convertToCelcius(readAnalog0());
-   sprintf(str,"Temperature: %02d C",(uint16_t)tempResult);  //converting temperature result to string
+   sprintf(str,"Temp : %02d deg C",(uint16_t)tempResult);  //converting temperature result to string
    if(current_seconds%10 == 0||current_seconds%10 == 1||current_seconds%10 == 9)               //storing and displaying the temperature data for 10|9|11 seconds once
    {
       writeToSDcard(date_arr,time_arr,str);   //writing to SD card along with time stamp
-      Lcd_sendCommand(0x94);
-      Lcd_sendString(str);
    }
-   delay1(400);        //1 sec delay
+   Lcd_sendCommand(0x94);
+   Lcd_sendString(str);
+   //delay1(400);        //1 sec delay
    //readFromSDcard();  //used to read stored data from SD card
 }
